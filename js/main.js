@@ -111,3 +111,14 @@ floatingObject('.floating2', 1.5, 15)
 floatingObject('.floating3', 2.5, 30)
 
 
+// scroll magic 부분
+const spyEls = document.querySelectorAll('section.scroll-spy')
+spyEls.forEach(function(spyEl){
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+      triggerHook: .8 // 감시라인 (요소가 이 라인을 넘었는지 판단) 가장 위가 0 아래가 1
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+})
