@@ -5,7 +5,6 @@ body{
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 6000px;
 }
 img{
   display: block;
@@ -191,7 +190,6 @@ header .main-menu{
   z-index: 1;
 }
 
-header .main-menu .item{}
 header .main-menu .item .item__name{
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px 20px 34px 20px;
@@ -735,4 +733,125 @@ header .badges .badge{
 }
 .find-store .text-group .description{
   margin-bottom: 20px;
+}
+
+/* AWARDS */
+.awards{
+  background-color: #272727;
+}
+.awards .inner{
+  padding: 40px 0;
+  overflow: hidden;
+}
+.awards .swiper-container{
+  width: 100%;
+  height: 40px;
+}
+.awards .swiper-prev,
+.awards .swiper-next{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  outline: none;
+  color: #fff;
+  opacity: .3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* top: 0; */
+  bottom: 5px;
+  /* margin: auto; */
+  z-index: 1;
+}
+.awards .swiper-prev .material-icons,
+.awards .swiper-next .material-icons{
+  font-size: 15px;
+}
+.awards .swiper-prev{
+  left: 0px;
+}
+.awards .swiper-next{
+  right:10px
+}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover{
+  background-color: #fff;
+  color: #333;
+}
+
+/* FOOTER */
+footer{
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+footer .inner{
+  padding: 40px 0 60px;
+}
+footer .menu{
+  display: flex;
+  justify-content: center;
+}
+footer .menu li{
+  position: relative;
+}
+footer .menu li::before{
+  content: '';
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .menu li:last-child::before{
+  display: none;
+}
+footer .menu li a{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+footer .menu li a.green{
+  color: #669900;
+}
+footer .btn-group{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer .btn-group .btn{
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child{
+  margin-right: 0px;
+}
+footer .info{
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span{
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+footer .info span:last-child{
+  margin-right: 0px;
+}
+
+footer .copyright{
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo{
+  margin: 30px auto 0;
 }
