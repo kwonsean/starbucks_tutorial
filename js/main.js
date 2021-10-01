@@ -1,3 +1,4 @@
+// 돋보기 부분 기능
 const searchEl = document.querySelector(".search")
 const searchInputEl = searchEl.querySelector('input')
 
@@ -15,7 +16,7 @@ searchInputEl.addEventListener('blur', function(){
   searchInputEl.setAttribute('placeholder', '')
 });
 
-
+// 뱃지 부분 기능
 const badgeEl = document.querySelector("header .badges")
 // 함수가 우르르 실행되는것이 아니라 0.3초 간격으로 실행되도록 함
 window.addEventListener('scroll', _.throttle(function(){
@@ -34,3 +35,12 @@ window.addEventListener('scroll', _.throttle(function(){
   }
 },300));
 // _.throttle(함수, 시간(ms단위))
+
+// visual부분 
+const fadeEls = document.querySelectorAll('.visual .fade-in')
+fadeEls.forEach(function(fadeEl, index){
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7,  //!! 지렷다.
+    opacity: 1
+  })
+});
