@@ -18,6 +18,9 @@ searchInputEl.addEventListener('blur', function(){
 
 // 뱃지 부분 기능
 const badgeEl = document.querySelector("header .badges")
+// to-top 버튼 찾기
+const toTopEl = document.querySelector('#to-top')
+
 // 함수가 우르르 실행되는것이 아니라 0.3초 간격으로 실행되도록 함
 window.addEventListener('scroll', _.throttle(function(){
   // console.log(window.scrollY)
@@ -27,14 +30,26 @@ window.addEventListener('scroll', _.throttle(function(){
       opacity: 0,
       display: 'none'
     });
+    gsap.to(toTopEl, .2, {
+      x: 0
+    })
   } else{
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     });
+    gsap.to(toTopEl, .2, {
+      x: 100
+    })
   }
 },300));
 // _.throttle(함수, 시간(ms단위))
+
+toTopEl.addEventListener('click', function (){
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 
 // visual부분 
 const fadeEls = document.querySelectorAll('.visual .fade-in')
